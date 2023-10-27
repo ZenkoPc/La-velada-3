@@ -1,0 +1,86 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		<link rel="preload" href="/fonts/BOXING.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+		<link rel="preload" href="/fonts/BOXING- stripped.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+	</head>
+	<body class="max-w-screen overflow-x-hidden">
+		<slot />
+	</body>
+</html>
+
+<style is:global>
+	body{
+		background: #131313;
+	}
+	@font-face {
+		font-family: 'Boxing';
+		src: url('/fonts/BOXING.woff2') format("woff2");
+	}
+	@font-face {
+		font-family: 'Boxing Striped';
+		src: url('/fonts/BOXING- striped.woff2') format("woff2");
+	}
+</style>
+
+<script>
+	const boxers = document.querySelector('#boxers')
+	const boxersImgs = boxers?.querySelectorAll('img')
+
+	const info = document.querySelector('#info')
+	const combat = document.querySelector('#combat')
+
+	boxersImgs?.forEach(img => {
+		img.addEventListener('mouseleave', () => {
+			boxersImgs.forEach(img => {
+				img.setAttribute('style', 'transition: all .7s ease-in-out')
+			})
+
+			info?.setAttribute('style', 'opacity: 1; z-index: 10; transition: all .5s ease-in-out')
+			combat?.setAttribute('style', 'opacity: 0; z-index: 0; transition: all .5s ease-in-out')
+		})
+		img.addEventListener('mouseenter', () => {
+			const sectionImages = img.parentNode?.children as HTMLCollection
+			const position = Array.from(sectionImages).indexOf(img)
+			const [leftBoxer, rightBoxer] = [
+				boxersImgs[position],
+				boxersImgs[position+boxersImgs.length/2]
+			]
+
+			info?.setAttribute('style', 'opacity: 0; z-index: 0; transition: all .5s ease-in-out')
+			combat?.setAttribute('style', 'opacity: 1; z-index: 10; transition: all .5s ease-in-out')
+
+			const [firstBoxerName, secondBoxerName] = combat?.querySelectorAll('h3')
+			firstBoxerName.innerText = leftBoxer.alt
+			secondBoxerName.innerText = rightBoxer.alt
+
+			boxersImgs.forEach(img => {
+				img.setAttribute('style', 'filter:blur(1px) grayscale(.8); transition: all 2s easy-in-out')
+			})
+			
+			leftBoxer.setAttribute(
+				'style',
+				'scale:1.05; translate: 50% ;contrast: 1.1; transition: all .5s ease-in-out'
+			)
+
+			rightBoxer.setAttribute(
+				'style',
+				'scale:1.05; translate: -50%; contrast: 1.1; transition: all .5s ease-in-out'
+			)
+		})
+	})
+</script>

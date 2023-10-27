@@ -1,0 +1,130 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="La Velada del Año - Un proyecto de Ibai Llanos">
+	<header class="relative z-10">
+		<div class="lg:absolute z-10 lg:mt-0 mt-4 lg:left-1/2 lg:top-10 lg:-translate-x-1/2 flex- flex-col gap-1 justify-center items-center">
+			<div class="flex justify-center items-center">
+				<img src="/images/logo.webp" alt="Logo de la velada" class="w-32 lg:w-64 h-auto">
+			</div>
+			<h1 class="text-5xl font-boxing uppercase text-center text-white font-bold">
+				<span class="bg-gradient-to-b inline-block leading-loose from-white via-gray-400 to-white bg-clip-text text-transparent">
+					La Velada del Año	
+				</span>
+				<span class="text-red-900">
+					III
+				</span>
+			</h1>
+		</div>
+	</header>
+	<main class="relative">
+		<section id="boxers" class={`flex justify-between relative [&>div>img]:absolute [&>div>img]:bottom-0 [&>div>img]:w-auto h-[40vh] md:h-[65vh] lg:h-screen pt-4 lg:pt-24 border-b border-white/10 `}>
+			<div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#131313] via-zinc-800 to-zinc-950 ">
+			</div>
+			<div class="relative w-full [&>img]:transition-all [&>img]:animate-duration-700 [&>img]:animate-ease-in-out">
+				<img class="coscu z-50 left-0 h-full animate-delay-0" src="/images/coscu.webp" alt="Coscu">
+				<img class="mayichi z-40 left-[5%] h-[80%] animate-delay-300 animate-fade-left" src="/images/mayichi.webp" alt="Mayichi">
+				<img class="viruzz z-30 left-[15%] h-[75%] animate-delay-500 animate-fade-left" src="/images/viruzz.webp" alt="Viruzz">
+				<img class="fernanfloo z-20 left-[28%] h-[70%] animate-delay-700 animate-fade-left" src="/images/fernanfloo.webp" alt="Fernanfloo">
+				<img class="la-rivers z-10 left-[40%] h-[68%] animate-delay-1000 animate-fade-left" src="/images/la-rivers.webp" alt="La Rivers">
+				<img class="papigavi z-0 left-[47%] h-[63%] animate-delay-[1300ms] animate-fade-left" src="/images/papigavi.webp" alt="Papigavi">
+			</div>
+			<div class="relative w-full [&>img]:transition-all [&>img]:animate-duration-1000 [&>img]:animate-ease-in-out">
+				<img class="german z-50 right-0 h-full animate-delay-0" src="/images/german.webp" alt="German">
+				<img class="amouranth z-40 right-[5%] h-[80%] animate-fade-right animate-delay-300" src="/images/amouranth.webp" alt="Amouranth">
+				<img class="shelao z-30 right-[18%] h-[75%] animate-fade-right animate-delay-500" src="/images/shelao.webp" alt="Shelao">
+				<img class="luzu z-20 right-[28%] h-[70%] animate-fade-right animate-delay-700" src="/images/luzu.webp" alt="Luzu">
+				<img class="rivers z-10 right-[40%] h-[68%] animate-fade-right animate-delay-1000" src="/images/rivers.webp" alt="Rivers">
+				<img class="ampeter z-0 right-[47%] h-[63%] animate-fade-right animate-delay-[1300ms]" src="/images/ampeter.webp" alt="Ampeter">
+			</div>
+			<div class="absolute w-10 inset-0 justify-center opacity-40 -translate-x-1/2 left-1/2 flex gap-3">
+				<div class="w-2 blur-sm h-full bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-purple-100 via-purple-300 to-purple-800"></div>
+				<div class="w-2 blur-sm h-full bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-purple-100 via-purple-300 to-purple-800"></div>
+				<div class="w-2 blur-sm h-full bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-purple-100 via-purple-300 to-purple-800"></div>
+			</div>
+		</section>
+		<div id="info" class="md:absolute md:bottom-52 z-50 mx-auto md:left-1/2 md:-translate-x-1/2">
+			<div class="font-boxing flex flex-col">
+				<div class="px-5 py-2 pt-4 pb-2 bg-white text-black">
+					<h2 class="text-6xl text-center">
+						1 de JULIO
+					</h2>
+				</div>
+				<div class="px-5 pt-2 pb-1 bg-black text-white">
+					<a class="text-[40px] flex justify-center gap-0 hover:contrast-150 hover:scale-105 transition-all" href="https://twitch.tv/ibai" target="_blank" rel="nopener noreferrer">
+						<span class="text-white">
+							twitch.tv/
+						</span>
+						<span class=" text-yellow-400">
+							ibai
+						</span>
+					</a>
+				</div>
+				<div class="px-5 pt-4 pb-2 text-center bg-sky-700 text-black">
+					<a class="text-4xl inline-block hover:contrast-150 hover:scale-105 transition-all" href="https://twitch.tv/ibai" target="_blank" rel="nopener noreferrer">
+						<span class="text-white">
+							Comprar Entradas
+						</span>
+					</a>
+				</div>
+			</div>
+		</div>
+		<div id="combat" class="absolute opacity-0 font-boxing bottom-52 z-0 mx-auto left-1/2 -translate-x-1/2">
+			<div class="px-5 py-2 pt-4 pb-2 bg-white text-black">
+				<h3 class="text-6xl text-center">
+					Mayichi
+				</h3>
+			</div>
+			<div class="flex justify-center pt-5 pb-3 ">
+				<span class="text-6xl text-yellow-500 text-center [text-shadow:2px_2px_0px_red,4px_4px_0px_orange,6px_6px_0px_black]">
+					VS
+				</span>
+			</div>
+			<div class="px-5 pt-4 pb-2 text-center bg-sky-700 text-black">
+				<h3 class="text-6xl text-center">
+					Amouranth
+				</h3>
+			</div>
+		</div>
+	</main>
+</Layout>
+
+<style>
+	.coscu{
+		clip-path: polygon(1% 0%, 0px 0px, 0px 100%, 80% 100%, 75% 83%, 67% 70%, 55% 57%, 45% 49%, 28.96% 45.19%, 38.77% 42.89%, 47.87% 43.34%, 56.77% 43.38%, 72.35% 42.41%, 80.06% 39.71%, 85.25% 36.14%, 103.21% 31.42%, 96.44% 26.49%, 97.15% 24.49%, 99.96% 22.25%, 98% 21%, 95% 18%, 94% 16%, 92% 14%, 89% 12%, 89% 10%, 68.98% 7.28%, 61.11% 4.31%, 31.51% 2.81%, 16.16% 3.26%);
+	}
+	.mayichi{
+		clip-path: polygon(100% 100%, 28% 100%, 22.43% 88.12%, 19% 72.46%, 4% 68%, 8% 43%, 8.25% 32%, 16% 18%, 21% 8%, 34.47% -0.07%, 58.49% -0.23%, 80% 6%, 79% 13%, 80% 18%, 77.24% 20.61%, 71% 24%, 68.66% 29.15%, 94% 40%, 88.24% 58.69%, 89.75% 72.69%, 99.25% 78.69%, 100% 100%)
+	}
+	.viruzz{
+		clip-path: polygon(90.46% 101.26%, 104.62% 99%, 96% 56%, 93% 48%, 86.58% 38.09%, 75.93% 29.98%, 76.85% 26.29%, 89% 22%, 90% 15%, 86.62% 9.67%, 90.08% -0.28%, 41.46% -2.61%, 26.23% 2.71%, 19.15% 15%, 30.77% 22%, 26% 25.68%, 6% 35%, 5% 61%, 6% 100%, 79% 100%);
+	}
+	.fernanfloo{
+		clip-path: polygon(76% 100%, 80.03% 101.88%, 87.03% 101.56%, 100% 100%, 102.42% 90.35%, 91% 85%, 80% 71%, 81% 60%, 81% 43%, 78% 33%, 62.64% 26.3%, 65.45% 24.4%, 71% 22%, 72% 16%, 76% 13%, 70.84% 8.25%, 67.45% 4.65%, 68.84% 1.6%, 62% -7px, 39% 0px, 23% 3%, 15% 5%, 8% 14%, 12.07% 21.03%, 17.16% 21.7%, 26.78% 22%, 22.78% 24.65%, 4% 31%, 0% 36%, 0% 42%, -3px 66%, -4px 72.33%, -3px 81%, 0px 87%, 0px 95%, 2% 100%, 13% 100%, 23% 100%);
+	}
+	.la-rivers{
+		clip-path: polygon(29% 100%, 17% 89%, 19% 81%, 23% 77%, 31% 72%, 38% 69%, 36% 63%, 32% 57%, 26% 53%, 24% 49%, 16% 47%, 9% 42%, 10% 35%, 11% 29%, 4% 26%, 9% 16%, 10% 10%, 10.47% 5%, 15% 0px, 45% 0px, 61% 0px, 67% 0px, 76% 4%, 81.13% 5.64%, 84.8% 9.19%, 89.27% 14%, 93.2% 17.19%, 87.8% 22%, 81.47% 27.7%, 67.93% 29.72%, 71.4% 34%, 79% 38%, 89% 42%, 94% 45%, 96.27% 52%, 95.93% 55%, 91.53% 60%, 93.4% 63.64%, 97.67% 68%, 94.4% 72.64%, 96.53% 78.28%, 101.6% 83.28%, 96% 90%, 95% 93%, 97% 98%, 97% 100%, 95% 100%);
+	}
+	.papigavi{
+		clip-path: polygon(79% 100%, 83.82% 85.28%, 92.6% 79.78%, 97.86% 75.13%, 104.04% 69.66%, 100% 61%, 89% 54%, 81% 36%, 74.8% 28.51%, 73% 25%, 74% 21%, 82% 19%, 81% 15%, 84% 12%, 84% 6%, 74% 2%, 48% 0px, 36% 2%, 33% 9%, 31% 17%, 21% 20%, 11% 23%, 3% 27%, 0px 34%, 0px 49%, 0px 61%, 0px 69%, 7% 75%, 10% 84%, 18% 87%, 23% 100%);
+	}
+	.ampeter{
+		clip-path: polygon(14% 100%, 94% 100%, 94% 92%, 100% 87%, 100% 42%, 100% 34%, 75% 25%, 65% 22%, 65% 17%, 75% 10%, 73% 3%, 60% 1%, 29% 0px, 23% 3%, 24% 4%, 21% 7%, 20% 10%, 16% 13%, 20% 18%, 24% 22%, 26.14% 23.17%, 30.26% 26%, 35% 29%, 23% 31%, 20.24% 37.81%, 18.71% 53.03%, 10.14% 61.75%, 0px 69%, -5.24% 80.11%, 0px 88%, 4.22% 89.51%, 13% 94%);
+	}
+	.rivers{
+		clip-path: polygon(32% 100%, 83% 100%, 86.49% 92.37%, 98.14% 82%, 101.21% 73.63%, 95.63% 60.63%, 95.28% 52.49%, 101.35% 41%, 105.35% 32.63%, 83.42% 23.26%, 79.28% 11%, 76.56% 1.88%, 44% -0.49%, 22.72% 2.63%, 14.65% 11.37%, 16.58% 19%, 16.65% 28%, 19% 40%, 18% 44%, 16.51% 50.37%, 9.65% 63.63%, -1.21% 79%, 8% 86.61%, 22.51% 89.45%);
+	}
+	.luzu{
+		clip-path: polygon(8% 100%, 87% 100%, 102.85% 70.7%, 102.85% 36%, 92.71% 28%, 82.31% 24%, 79.61% 20.7%, 84.9% 15.7%, 90% 8%, 79.9% 1.24%, 45% -1px, 21.1% 4.49%, 16.24% 16.7%, 19.24% 22.05%, 29.24% 24.4%, 38% 28%, 22% 32%, 11% 68%, 4% 82%, 5% 93%);
+	}
+	.shelao{
+		clip-path: polygon(12.00% 99.33%, 88% 100%, 90% 90%, 94% 84%, 91% 71%, 100% 62%, 100% 34%, 78% 26%, 66% 23%, 72.49% 10%, 66.66% 4.67%, 42% 2%, 25% 7%, 14% 16%, 16.67% 22.33%, 29.18% 26.31%, 31% 29%, 17.34% 35.33%, 17% 43%, 11% 66%, 0px 74%, -3px 88.64%, 11.51% 88.31%, 11% 92%);
+	}
+	.amouranth{
+		clip-path: polygon(89% 100%, 95% 86%, 100% 64%, 79.96% 56.39%, 85% 48%, 98% 48%, 100% 42%, 100% 35%, 100% 16%, 95.69% 10.61%, 79.35% -2px, 46% -0.84%, 33% 5%, 36.89% 14%, 33.35% 17.31%, 38.93% 20%, 45.61% 26.14%, 35% 32%, 21.27% 39.08%, 23.93% 45.69%, 31.25% 48.47%, 33% 57%, 30% 65%, 0px 83%, 0px 100%);
+	}
+	.german{
+		clip-path: polygon(12% 100%, -9.12% 98.93%, 4.95% 87.25%, 6.98% 72.25%, 2.94% 63%, 13.96% 54.26%, 71% 42%, 74% 40%, 60.93% 41.88%, 43% 43.14%, 22.95% 38.9%, 8.87% 32.67%, 8.9% 25.7%, 4.94% 20.98%, -15.18% 14.46%, 32.21% 0px, 100% 0px, 100% 100%);
+	}
+</style>
